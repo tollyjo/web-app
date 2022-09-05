@@ -103,7 +103,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Susan Learning Snapshot Nexus Repository </name>
-	      <urlhttp://172.31.6.22:8081/repository/rbc-snapshots/</url>
+	      <url>http://172.31.6.22:8081/repository/rbc-snapshots/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
