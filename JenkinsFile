@@ -1,5 +1,4 @@
 node("Node1"){
-def MHD = tool name: "maven3.8.6"
 stage('GitClone'){
   sh "echo this is git clone"
   git 'https://github.com/acadalearning/web-app.git'
