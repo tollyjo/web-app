@@ -95,15 +95,15 @@
 	
 	<distributionManagement>
 	    <repository>
-	      <id>Nexus-Server</id>
+	      <id>nexus</id>
 	      <name>Susan Learning Releases Nexus Repository</name>
-	      <url>http://172.31.7.2:8081/repository/rbc-release/</url>
+	      <url>http://3.99.244.11:8081/repository/rbc-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
-	      <id>Nexus-Server</id>
+	      <id>nexus</id>
 	      <name>Susan Learning Snapshot Nexus Repository </name>
-	      <url>http://172.31.7.2:8081/repository/rbc-snapshot/</url>
+	      <url>http://3.99.244.11:8081/repository/rbc-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
