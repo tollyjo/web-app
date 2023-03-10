@@ -4,7 +4,7 @@ stage('GitClone'){
   git 'https://github.com/acadalearning/web-app.git'
   }
 stage('Build'){
-  sh "echo start of build process"
+  sh "echo start of maven build process"
   sh "echo build done"
   }
 stage('CodeQuality'){
