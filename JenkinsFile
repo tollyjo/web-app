@@ -18,7 +18,7 @@ stage('BackupArtifacts'){
   }
   }
 stage('DeploytoTomcat'){
-  sh "echo Deploy to Tomcat server!"
+  sh "echo Deploy to Tomcat server"
   
   }
 }
