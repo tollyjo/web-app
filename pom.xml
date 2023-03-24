@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>3.0.6-RELEASE</version>	
+	<version>3.0.6-SNAPSHOT</version>	
 	
 	<name>maven-web-application</name>
 
@@ -97,13 +97,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>Susan Learning Releases Nexus Repository</name>
-	      <url>http://3.99.135.217:8081/repository/rbc-release/</url>
+	      <url>http://172.31.11.201:8081/repository/rbc-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Susan Learning Snapshot Nexus Repository </name>
-	      <url>http://3.99.135.217:8081/repository/rbc-snapshot/</url>
+	      <url>http://172.31.11.201:8081/repository/rbc-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
