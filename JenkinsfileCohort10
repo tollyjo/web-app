@@ -1,0 +1,48 @@
+pipeline{
+  agent { label 'Node1'}
+  tools {
+    maven 'maven3.8.6'
+  }
+  options {
+    timeout(time: 1, unit:"DAY")
+  }
+  stages {
+    stage('Cloning'){
+      steps {
+        echo 'Cloning from GitHub'
+        git credentialsId: 'GitHub_Credentials', url: 'https://github.com/SusanOnuorah/web-app.git'
+        echo 'Cloning done'
+      }
+    }
+    stage('Building'){
+      steps {
+        echo "packaging our artifact"
+        sh 'mvn package'
+        echo "Packing done"
+      }
+    }
+    stage('Testing'){
+      steps {
+        echo 'Testing with Sonarqube'
+        sh 'mvn sonar:sonar'
+        echo 'Testing done'
+      }
+    }
+    
+    stage('Approval'){
+      steps {
+        echo "Seeking Approval"
+        timeout(time: 5, unit: "DAYS"){
+        input message: 'Approve to production'
+        }
+      }
+    }
+    stage('Tomcat'){
+      steps {
+        echo 'Pushing to Tomcat'
+        deploy adapters: [tomcat9(credentialsId: 'tomcat_cred', path: '', url: 'http://35.183.29.129:8080/')], contextPath: null, onFailure: false, war: 'target/*war'
+        echo 'Done'
+      }
+    }
+  }
+}
